@@ -1,5 +1,13 @@
 #学习JS期间的代码整理
 
+##JS基础
+
+onmouseover 触发频率不是像素，是时间间隔【很短】
+
+
+
+
+
 
 知识点整理
 
@@ -77,8 +85,6 @@ function show(){
 ```
 ###选项卡
 
-###拖拽
-
 ###包装对象
 
 系统对象是基于原型的程序
@@ -92,4 +98,28 @@ function show(){
 _proto_
 
 原型链的最外层是Object.prototype
+
+
+toString()
+
+
+###对象的继承
+
+子类不影响父类，子类可以继承父类的功能[代码复用]
+
+属性的继承：调用父类的构造方法 call修改this指向
+
+方法的继承：复制继承 for in
+
+```
+function extend(obj1, obj2){
+			for(var attr in obj2){
+				obj1[attr] = obj2[attr];
+			}
+		}
+```
+函数无法修改，只能重新赋值
+赋值和引用不同
+
+###拖拽
 

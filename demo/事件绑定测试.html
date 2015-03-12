@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试事件绑定</title>
+</head>
+<body>
+
+
+<script>
+function bind (obj,ev,fn) {
+	if (obj.addEventListener) {
+		// 标准
+		obj.addEventListener(ev,fn,false);
+	} else{
+		// IE
+		obj.attachEvent('on'+ev,fn);
+	};
+}
+function unbind (obj,ev,fn) {
+	if (obj.removeEventListener) {
+		// 正常
+		obj.removeEventListener(ev,fn,false);
+	}else{
+		// IE
+		obj.detachEvent('on'+ev,fn);
+	}
+}
+
+// 事件取消绑定
+function fn1 () {
+	alert(1);
+	console.log("1");
+	unbind(document,'click',fn1)
+	console.log("2");
+}
+
+bind(document,'click',fn1)
+
+</script>
+</body>
+
+
+
+</html>
