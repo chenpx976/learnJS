@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件工具测试</title>
+</head>
+<body>
+
+<script type="text/javascript" src="EventUtil.js"></script>
+<script>
+function fn1 () {
+	alert('msg');
+}
+EventUtil.addHandler(document,"click",fn1);
+
+EventUtil.removeHandler(document,"click",fn1);
+
+
+
+</script>
+</body>
+
+
+
+</html>
