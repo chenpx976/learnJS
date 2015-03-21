@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style type="text/css">
+    #img1 {
+        position: absolute;
+    }
+
+    #div1 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+    }
+
+    #div2 {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        position: absolute;
+        left: 100px;
+    }
+
+    #div3 {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        position: absolute;
+        left: 200px;
+    }
+
+    #div4 {
+        width: 100px;
+        height: 100px;
+        background: green;
+        position: absolute;
+        left: 300px;
+    }
+    </style>
+    <script src="drag.js"></script>
+    <script type="text/javascript">
+    /*
+    onmousedown:选择元素
+    onmousemove:移动元素
+    onmouseup:释放元素
+
+    问题：
+    1. 鼠标移动过快，移出拖拽对象。
+    2. 多个拖拽，层叠问题。
+    3. 默认浏览器可以拖拽已经选择的文字，和图片本身的拖拽。
+    */
+    window.onload = function() {
+        var d0 = new Drag();
+        d0.init({
+            id: 'img1'
+        })
+        var d1 = new Drag();
+        d1.init({ //配置参数
+            id: 'div1'
+        });
+
+        var d2 = new Drag();
+        d2.init({ //配置参数
+            id: 'div2',
+            toDown: function() {
+                document.title = 'helloworld';
+                document.body.style.background = '#333';
+            },
+            toUp : function(){
+            	document.body.style.background = '#fff';
+            }
+        });
+
+        var d3 = new Drag();
+        d3.init({ //配置参数
+            id: 'div3',
+            toDown: function() {
+                document.title = '测试';
+            },
+            toUp: function() {
+                document.title = '拖拽';
+            }
+        });
+
+        var d4 = new Drag();
+        d4.init({ //配置参数
+            id: 'div4',
+            toUp: function() {
+                document.title = 'go';
+            }
+        });
+    }
+    </script>
+</head>
+
+<body>
+    <img id="img1" src="https://www.baidu.com/img/bdlogo.png">
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+</body>
+
+</html>
