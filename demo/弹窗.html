@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>弹窗</title>
+<style>
+*{ margin:0; padding:0;}
+.login{ background:white; border:1px #000 solid; position:absolute; left:0; top:0;  z-index:2;}
+.title{ height:30px; background:gray; color:white;}
+.title .close{ float:right;}
+#mark{ background:black; fitler:alpha(opacity=50); opacity:0.5; position:absolute; left:0; top:0; z-index:1;}
+</style>
+<script src="Dialog.js"></script>
+<script>
+
+window.onload = function(){
+	var aInput = document.getElementsByTagName('input');
+
+	aInput[0].onclick = function(){
+
+		var d1 = new Dialog();
+		d1.init({   //配置参数
+			iNow : 0,
+			title : '登录'
+		});
+
+	};
+
+	aInput[1].onclick = function(){
+
+		var d1 = new Dialog();
+		d1.init({   //配置参数
+			iNow : 1,
+			w : 100,
+			h : 400,
+			dir : 'right',
+			title : '公告'
+		});
+
+	};
+
+	aInput[2].onclick = function(){
+
+		var d1 = new Dialog();
+		d1.init({   //配置参数
+			iNow : 2,
+			title: '图片',
+			mark : true
+		});
+
+	};
+
+
+};
+
+</script>
+</head>
+
+<body>
+<input type="button" value="1">
+<input type="button" value="2">
+<input type="button" value="3">
+</body>
+</html>
