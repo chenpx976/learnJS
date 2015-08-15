@@ -7,8 +7,10 @@
 
 目前有：
 
+
  - 跨浏览器的事件处理
  - 拖拽组件
  - 弹窗
  - 正则表达式
+ - [Zepto.js 源码注释](http://www.cnblogs.com/sky000/archive/2013/03/29/2988952.html)
  - 其他

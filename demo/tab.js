@@ -18,8 +18,6 @@ $(function() {
             var index = _this.index();
 
             aDiv.eq(index).show().siblings().hide();
-
-
         }, 300);
 
 
@@ -55,18 +53,6 @@ $(function() {
     }
 })();
 // 有对象的青年
-
-window.onload = function() {
-
-    var t1 = new Tab('div1');
-
-    t1.init();
-    t1.autoplay();
-
-    var t2 = new Tab('div2');
-    t2.init();
-}
-
 function Tab(id) {
     this.oParent = document.getElementById(id);
     this.aInput = this.oParent.getElementsByTagName('input');
