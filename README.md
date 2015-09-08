@@ -13,4 +13,6 @@
  - 弹窗
  - 正则表达式
  - [Zepto.js 源码注释](http://www.cnblogs.com/sky000/archive/2013/03/29/2988952.html)
- - 其他
+ - [Solving IE7 & IE8 PNG Opacity Problems](http://www.jacklmoore.com/notes/ie-transparency-problems/)
+ - [Sticky Footer](https://css-tricks.com/snippets/css/sticky-footer/)
+ - [Sticky Footer中文](http://www.cssstickyfooter.com/cn/using-sticky-footer-code.html)
