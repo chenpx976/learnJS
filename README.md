@@ -1,3 +1,11 @@
+## [codewars代码记录](./codewars/)
+
+ - vowel2index 元音字母转索引
+ - toCurrency 数字转金钱
+ - toJadenCase 字符串首字母转大写
+ - OrderPeople 箭头函数
+
+
 ## JS和CSS相关整理
 
 ### css-tricks
