@@ -15,7 +15,7 @@ var EventUtil = {
             element.attachEvent("on" + type, handler);
         } else {
             element["on" + type] = handler;
-        };
+        }
     },
     removeHandler: function(element, type, handler) {
         if (element.removeEventListener) {
@@ -24,7 +24,7 @@ var EventUtil = {
             element.detachEvent("on" + type, handler);
         } else {
             element["on" + type] = null;
-        };
+        }
     },
     //取得event对象
     getEvent: function(event) {
@@ -42,7 +42,7 @@ var EventUtil = {
             event.preventDefault();
         } else {
             event.returnValue = false;
-        };
+        }
     },
     // 立即停止事件在DOM层次中的传播
     // 取消进一步的事件捕获或冒泡
@@ -51,9 +51,6 @@ var EventUtil = {
             event.stopPropagation();
         } else {
             event.cancelBubble = true;
-        };
+        }
     }
-
-
-
-}
+};

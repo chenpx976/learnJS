@@ -12,7 +12,7 @@ function heggeleggleggo(word){
 	return aWord.join('');
 }
 
-let heggeleggleggo = w => w.replace(/([^aeiou ])/gi, "$1egg");
-const heggeleggleggo = word => word.replace(/([^aeiou\s])/gi, "$1egg");
+var heggeleggleggo = w => w.replace(/([^aeiou ])/gi, "$1egg");
+var heggeleggleggo = word => word.replace(/([^aeiou\s])/gi, "$1egg");
 
 console.log(heggeleggleggo("eggy breadaaa"));

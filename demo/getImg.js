@@ -9,9 +9,9 @@ var fs = require('fs');
 
 
 var Url = [];
-for (var i = 1; i < 5; i++) {
-	Url.push("http://www.meizitu.com/a/list_1_" + i+".html")
-};
+for (var i = 1; i < 2; i++) {
+	Url.push("http://www.meizitu.com/a/list_1_" + i+".html");
+}
 var imgSrc = [];
 async.mapLimit(Url,1, function (item, callback) {
 	console.log(item);
